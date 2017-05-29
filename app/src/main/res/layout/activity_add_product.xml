@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.inuk.dabz.omsapplication.AddProductActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <EditText
+            android:id="@+id/prodname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="Product Name"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/prodId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Product Id"
+            android:inputType="textPersonName"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/prodname"
+            android:layout_alignStart="@+id/prodname" />
+
+        <EditText
+            android:id="@+id/proddesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:ems="10"
+            android:hint="Product Description"
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:layout_below="@+id/prodId"
+            android:layout_alignStart="@+id/prodId"
+            android:layout_gravity="center_horizontal"/>
+
+        <Spinner
+            android:id="@+id/uom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/proddesc"
+            android:layout_alignStart="@+id/proddesc"
+            android:layout_alignEnd="@+id/proddesc"
+            android:entries="@array/unit_of_measure"/>
+
+        <EditText
+            android:id="@+id/qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:hint="Qty"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/uom"
+            android:layout_alignStart="@+id/uom" />
+
+        <EditText
+            android:id="@+id/unitprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/unit_price"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="23dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/qty"
+            android:layout_alignStart="@+id/qty" />
+
+        <Button
+            android:id="@+id/addprodbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Add"
+            android:layout_below="@+id/unitprice"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="27dp" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
